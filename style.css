@@ -1,0 +1,174 @@
+/* Сброс и базовые стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; 
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Arial Black", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #201d1d;
+  color: #ffffff;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  overflow-x: hidden;
+}
+
+/* Основной контейнер задач */
+.ToDo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  max-height: calc(100vh - 80px); 
+  padding: 32px;
+  margin: 0;
+
+
+  background: #2a2626;
+  border: 3px solid #daa209;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(218, 162, 9, 0.18);
+
+
+  overflow-y: auto;
+
+
+  transition: all 0.3s ease;
+}
+
+.ToDo-list:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(218, 162, 9, 0.28);
+  border-color: #f5b338;
+}
+
+/* Заголовок */
+.Todo__name {
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Блок добавления задачи */
+.Todo_Add {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.Todo__input {
+  flex: 1;
+  padding: 14px 18px;
+  font-size: 18px;
+  outline: none;
+  border: 3px solid #daa209;
+  border-radius: 12px;
+  background: #333;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.Todo__input:focus {
+  border-color: #f5b338;
+  box-shadow: 0 0 0 4px rgba(245, 179, 56, 0.3);
+}
+
+.Todo__input:hover {
+  border-color: #ffffff;
+}
+
+.Todo_btn {
+  padding: 14px 22px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #f5b338;
+  border: 3px solid #daa209;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.Todo_btn:hover {
+  background-color: #e6a027;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Список задач */
+.Todo__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
+
+/* Одна задача */
+.Todo__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  background: #333;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.Todo__item:hover {
+  background: #3c3838;
+  transform: scale(1.02);
+  border-color: #f5b338;
+}
+
+/* Кнопки внутри задачи */
+.btn-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.Todo_btn--delete,
+.Todo_btn--rename {
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #f5b338;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.Todo_btn--delete:hover,
+.Todo_btn--rename:hover {
+  background-color: #e6a027;
+  transform: scale(1.05);
+}
+
+.Todo__item-checkbox {
+    display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+  margin-right: 8px;
+  transition: all 0.2s ease;
+}
